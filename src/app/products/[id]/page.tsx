@@ -12,7 +12,7 @@ const sizes = ["XS", "SM", "MD", "LG", "XL"];
 const Page = ({ params }: { params: { id: string } }) => {
   const result = getProductDetail(params.id);
   return (
-    <div className="flex justify-between flex-wrap flex-col lg:flex-row gap-y-5 items-center">
+    <div className="flex justify-between flex-wrap flex-col lg:flex-row gap-y-5 items-center p-14">
       {result.map((product) => (
         <div
           key={product.id}
