@@ -7,7 +7,7 @@ import { Input } from "../ui/input";
 const Header = () => {
   return (
     <div className="flex flex-col lg:flex-row md:flex-row gap-y-3 justify-between items-center
-     px-8 lg:px-12 py-5 text-white bg-black shadow-lg sticky top-0 z-50">
+     px-8 lg:px-12 py-5 text-white bg-gray-900 shadow-lg sticky top-0 z-50">
       <Link href={"/"} className="flex flex-row items-center select-none">
         <Image src={image} alt="logo" className="w-10" />
         <p className="text-3xl font-bold text-white">&nbsp;MARKET</p>
@@ -35,12 +35,12 @@ const Header = () => {
           type="button"
           name="Search"
           className="border-white border  p-[7px] border-l-0 bg-white rounded-r-full">
-          <SearchIcon className="text-black " />
+          <SearchIcon className="text-gray-900 " />
         </button>
       </div>
       <div className="w-10 h-10 rounded-full bg-white lg:flex justify-center items-center 
       hidden lg:visible">
-        <ShoppingCart className="text-black" />
+        <ShoppingCart className="text-gray-900" />
       </div>
     </div>
   );
