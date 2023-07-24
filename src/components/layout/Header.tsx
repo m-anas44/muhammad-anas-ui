@@ -6,7 +6,7 @@ import { SearchIcon } from "lucide-react";
 import { Input } from "../ui/input";
 const Header = () => {
   return (
-    <div className="flex flex-col lg:flex-row md:flex-row gap-y-3 justify-between items-center px-12 py-5 text-white bg-black">
+    <div className="flex flex-col lg:flex-row md:flex-row gap-y-3 justify-between items-center px-8 lg:px-12 py-5 text-white bg-black">
       <Link href={"/"} className="flex flex-row items-center select-none">
         <Image src={image} alt="logo" className="w-10" />
         <p className="text-3xl font-bold text-white">&nbsp;MARKET</p>

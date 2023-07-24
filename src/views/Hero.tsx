@@ -10,7 +10,7 @@ import adPic3 from "/public/ad3.webp";
 import adPic4 from "/public/ad4.webp";
 const Hero = () => {
     return (
-        <section className="flex justify-evenly flex-col lg:flex-row gap-y-5 py-12 flex-wrap px-8">
+        <section className="flex justify-evenly flex-col lg:flex-row gap-y-5 py-12 flex-wrap">
             {/* Left Divison */}
             <div className="flex-1">
                 <Badge className="py-4 px-6 bg-blue-200 text-blue-900 rounded-xl">Sale 70%</Badge>
