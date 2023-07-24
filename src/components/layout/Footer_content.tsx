@@ -4,7 +4,7 @@ import image from "/public/logo_white.png";
 import { Facebook, Twitter, Linkedin } from 'lucide-react';
 const FooterContent = () => {
   return (
-    <div className='flex flex-col lg:flex-row items-center flex-wrap'>
+    <div className='flex flex-col lg:flex-row items-center flex-wrap px-12'>
       {/* left portion */}
       <div className='flex-1 pb-9 text-center lg:text-left flex flex-col justify-center lg:justify-normal'>
         <div className="flex flex-row items-center select-none justify-center lg:justify-normal">

@@ -1,3 +1,4 @@
+import Content from '@/views/Content'
 import Hero from '@/views/Hero'
 import InputSection from '@/views/InputSection'
 import ProductList from '@/views/ProductList'
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <Promotions />
       <ProductList />
+      <Content />
       <InputSection />
     </div>
   )

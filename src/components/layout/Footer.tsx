@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 const Footer = () => {
   return (
-    <div className='flex justify-between flex-col rounded-l-lg lg:flex-row md:flex-row border-t-2 pt-3'>
+    <div className='flex justify-between flex-col rounded-l-lg lg:flex-row md:flex-row border-t-2 pt-3 px-12'>
       <div className='flex md:flex-row lg:flex-row flex-col gap-x-32 gap-y-6 mb-6 text-center justify-center'>
         <span>
           <h2 className='font-bold text-2xl'>Designed By.</h2>

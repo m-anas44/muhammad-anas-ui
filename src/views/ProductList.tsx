@@ -5,7 +5,7 @@ const ProductList = () => {
   console.log(product_checks);
   return (
     <div>
-      <div className="text-center py-5 pb-10">
+      <div className="text-center py-5 pb-10 px-12">
         <h3 className="text-blue-800 font-bold">PRODUCTS</h3>
         <h1 className="font-bold text-[24px]">Check What We Have</h1>
       </div>

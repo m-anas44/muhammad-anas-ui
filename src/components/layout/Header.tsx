@@ -6,7 +6,8 @@ import { SearchIcon } from "lucide-react";
 import { Input } from "../ui/input";
 const Header = () => {
   return (
-    <div className="flex flex-col lg:flex-row md:flex-row gap-y-3 justify-between items-center px-8 lg:px-12 py-5 text-white bg-black">
+    <div className="flex flex-col lg:flex-row md:flex-row gap-y-3 justify-between items-center
+     px-8 lg:px-12 py-5 text-white bg-black shadow-lg sticky top-0 z-50">
       <Link href={"/"} className="flex flex-row items-center select-none">
         <Image src={image} alt="logo" className="w-10" />
         <p className="text-3xl font-bold text-white">&nbsp;MARKET</p>
@@ -29,15 +30,16 @@ const Header = () => {
         </li>
       </ul>
       <div className=" hidden lg:flex flex-row items-center">
-        <Input className="w-60 rounded-none rounded-l-lg border" placeholder=" Search" />
+        <Input className="w-60 rounded-l-full border" placeholder=" Search" />
         <button
           type="button"
           name="Search"
-          className="border-white border  p-[7px] border-l-0 bg-white rounded-r-xl">
+          className="border-white border  p-[7px] border-l-0 bg-white rounded-r-full">
           <SearchIcon className="text-black " />
         </button>
       </div>
-      <div className="w-10 h-10 rounded-full bg-white lg:flex justify-center items-center hidden lg:visible">
+      <div className="w-10 h-10 rounded-full bg-white lg:flex justify-center items-center 
+      hidden lg:visible">
         <ShoppingCart className="text-black" />
       </div>
     </div>

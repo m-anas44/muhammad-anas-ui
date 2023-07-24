@@ -4,7 +4,7 @@ import React from 'react';
 import { ArrowBigRight } from 'lucide-react';
 const InputSection = () => {
   return (
-    <div className='w-full text-center'>
+    <div className='w-full text-center px-12'>
       <div className='flex flex-row justify-center'>
         <p className='absolute text-7xl lg:text-9xl md:text-9xl pt-24 opacity-25 font-bold'> Newsletter</p>
       </div>

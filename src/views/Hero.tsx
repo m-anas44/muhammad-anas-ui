@@ -10,14 +10,16 @@ import adPic3 from "/public/ad3.webp";
 import adPic4 from "/public/ad4.webp";
 const Hero = () => {
     return (
-        <section className="flex justify-evenly flex-col lg:flex-row gap-y-5 py-12 flex-wrap">
+        <div className="relative bg-fixed bg-cover bg-center custom-image">
+            <section className="flex justify-evenly flex-col lg:flex-row gap-y-5 pt-12 flex-wrap 
+         px-12 bg-black bg-opacity-50">
             {/* Left Divison */}
             <div className="flex-1">
-                <Badge className="py-4 px-6 bg-blue-200 text-blue-900 rounded-xl">Sale 70%</Badge>
-                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl py-8">
+                <Badge className="py-4 px-6 bg-blue-300 text-blue-900 rounded-[5px] hover:bg-blue-300">Sale 70%</Badge>
+                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl py-8 text-slate-100">
                     An Industrial Take on Streetwear
                 </h1>
-                <p className="leading-7 [&:not(:first-child)]:mt-8 text-lg motion-safe:animate-fadeIn">
+                <p className="leading-7 [&:not(:first-child)]:mt-8 text-lg motion-safe:animate-fadeIn text-white">
                     Anyone can beat you but no one can beat your outfit as long as you wear Dine outfits.
                 </p>
                 <Button className="bg-orange-300 hover:bg-orange-400 border-0 lg:h-14 my-6 font-bold lg:text-xl">
@@ -27,7 +29,7 @@ const Hero = () => {
                     &nbsp;&nbsp;&nbsp;
                 </Button>
 
-                <div className="flex lg:justify-between flex-wrap gap-y-3 mt-7 py-10 justify-evenly">
+                <div className="flex lg:justify-between flex-wrap gap-y-3 mt-7 py-10 gap-x-3">
                     <Ads image={adPic1} />
                     <Ads image={adPic2} />
                     <Ads image={adPic3} />
@@ -39,9 +41,10 @@ const Hero = () => {
             <div className="flex flex-1 justify-center">
                 <div className="absolute lg:w-[500px]  lg:h-[500px]
                  bg-orange-200 rounded-full"></div>
-                <Image src={picture} alt="hero_picture" className="relative h-fit" />
+                <Image src={picture} alt="hero_picture" className="relative" />
             </div>
         </section>
+        </div>
     );
 };
 export default Hero;
