@@ -6,7 +6,7 @@ const InputSection = () => {
   return (
     <div className='w-full text-center px-12'>
       <div className='flex flex-row justify-center'>
-        <p className='absolute text-7xl lg:text-9xl md:text-9xl pt-24 opacity-25 font-bold'> Newsletter</p>
+        <p className='absolute text-6xl lg:text-9xl md:text-9xl pt-24 opacity-25 font-bold'> Newsletter</p>
       </div>
       <div className='flex flex-col justify-center text-center mt-24 relative'>
         <h2 className='text-3xl font-bold'>Subscribe Our Newsletter</h2>
