@@ -5,7 +5,6 @@ import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 
 const getProductDetail = (id: number | string) => {
-  // console.log(id)
   return Products.filter((product) => product.id == id);
 };
 
@@ -34,10 +33,10 @@ const Page = ({ params }: { params: { id: string } }) => {
             <div>
               <h3 className="text-sm mt-8 font-bold">SELECT SIZE</h3>
               <div className="flex gap-x-4">
-                {sizes.map((allSize) => (
-                  <div className="border border-black hover:bg-black hover:text-white p-1 mt-5 hover:shadow-md hover:scale-110 duration-300 text-xs 
+                {sizes.map((item) => (
+                  <div key={item} className="border border-black hover:bg-black hover:text-white p-1 mt-5 hover:shadow-md hover:scale-110 duration-300 text-xs 
                   cursor-pointer select-none flex items-center">
-                    <span className="text-[11px] font-bold">{allSize}</span>
+                    <span className="text-[11px] font-bold">{item}</span>
                   </div>
                 ))}
               </div>
