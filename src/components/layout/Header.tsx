@@ -7,6 +7,7 @@ import { ShoppingCart, Search, MenuIcon, XIcon } from "lucide-react";
 import { Input } from '../ui/input';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [inputVal, setInputVal] = useState("")
   return (
     <nav className='flex justify-between items-center flex-wrap text-white bg-gray-900 shadow-lg sticky top-0 
     z-50 px-8 lg:px-12 py-4'>
@@ -48,13 +49,17 @@ const Header = () => {
 
         <div className={`lg:flex gap-x-3 ${isOpen ? "flex p-[12px] justify-between w-full" : "hidden"}`}>
           <div className="flex flex-row items-center w-full">
-            <Input className="w-full border-gray-400 border-[1px] shadow-none rounded-l-full text-gray-400 lg:border p-[6px]" placeholder=" Search" />
+            <Input className="w-full border-gray-400 border-[1px] shadow-none rounded-l-full text-gray-400 lg:border p-[6px]" 
+            placeholder=" Search" 
+            onChange={(e)=>setInputVal(e.target.value)}/>
+            <Link href={`/categories/${inputVal}`}>
             <button
               type="button"
               name="Search"
               className="border-gray-400 border-2 p-[6px] border-l-0 rounded-r-full">
               <Search className="text-gray-400" />
             </button>
+            </Link>
           </div>
           <div className="w-16 h-10 flex rounded-full bg-white justify-center items-center">
             <ShoppingCart className="text-gray-900 text-2xl" />
