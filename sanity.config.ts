@@ -16,6 +16,15 @@ export default defineConfig({
   dataset,
   // Add and edit the content schema in the './sanity/schema' folder
   schema,
+  api: {
+    projectId: 'p2h785b3',
+    dataset: 'production',
+    // CORS configuration
+    cors: {
+      origin: ['https://muhammad-anas-ui.vercel.app/'], // Replace with the actual URL of your Next.js application
+      credentials: true,
+    },
+  },
   plugins: [
     deskTool(),
     // Vision is a tool that lets you query your content with GROQ in the studio
