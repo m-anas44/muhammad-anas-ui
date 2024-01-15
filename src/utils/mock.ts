@@ -7,7 +7,7 @@ import img5 from "/public/pp5.webp";
 import img6 from "/public/pp6.webp";
 export const Products: Product[] = [
     {
-        id: 1,
+        slug: "1",
         name: "Brushed Raglan Sweatshirt",
         tagline: "Dress",
         price: 30,
@@ -15,7 +15,7 @@ export const Products: Product[] = [
         image: img1
     },
     {
-        id: 2,
+        slug: "2",
         name: "Cameeryn Sash Tie Dress",
         tagline: "Dress",
         price: 32,
@@ -23,7 +23,7 @@ export const Products: Product[] = [
         image: img2
     },
     {
-        id: 3,
+        slug: "3",
         name: "Flex Sweatshirt",
         tagline: "Dress",
         price: 28,
@@ -31,7 +31,7 @@ export const Products: Product[] = [
         image: img3
     },
     {
-        id: 4,
+        slug: "4",
         name: "Imperial Alpaca Hoodia",
         tagline: "Dress",
         price: 35,
@@ -39,7 +39,7 @@ export const Products: Product[] = [
         image: img4
     },
     {
-        id: 5,
+        slug: "5",
         name: "Pink Fleece Sweatpants",
         tagline: "Dress",
         price: 30,
@@ -47,7 +47,7 @@ export const Products: Product[] = [
         image: img5
     },
     {
-        id: 6,
+        slug: "6",
         name: "Flex Sweatpants",
         tagline: "Dress",
         price: 29,
@@ -55,7 +55,7 @@ export const Products: Product[] = [
         image: img6
     },
     {
-        id: 7,
+        slug: "7",
         name: "New Style Shirt",
         tagline: "Dress",
         price: 32,
@@ -63,7 +63,7 @@ export const Products: Product[] = [
         image: img1
     },
     {
-        id: 8,
+        slug: "8",
         name: "New Style Hoodie",
         tagline: "Dress",
         price: 32,

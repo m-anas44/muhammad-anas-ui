@@ -1,8 +1,8 @@
+import { getProducts } from "../../sanity/lib/query";
 import ProductCard from "./ProductCard";
-import { Products } from "@/utils/mock";
-const ProductList = () => {
-  const product_checks = Products.slice(2, 6);
-  console.log(product_checks);
+const ProductList = async() => {
+  const product_checks = await getProducts();
+  const sliced_products = product_checks.slice(0, 4)
   return (
     <div>
       <div className="text-center py-5 pb-10 px-12">
@@ -11,14 +11,14 @@ const ProductList = () => {
       </div>
       <div className="flex flex-wrap gap-x-3 flex-row gap-y-5 justify-center items-center mb-3">
         {
-          product_checks.map(product => (
+          sliced_products.map((product, index) => (
             <ProductCard
-              key={product.id}
-              title={product.name}
+              key={index}
+              slug={product.slug}
+              name={product.name}
+              category={product.category}
               price={product.price}
               image={product.image}
-              category={product.category}
-              id={product.id}
             />
           ))
         }

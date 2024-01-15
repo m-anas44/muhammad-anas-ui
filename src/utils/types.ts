@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
 export type Product = {
-    id: number,
+    slug: string;
     name: string,
     tagline: string,
     price: number,

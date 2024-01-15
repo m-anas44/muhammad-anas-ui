@@ -1,29 +1,37 @@
-import { Products } from "@/utils/mock";
 import ProductCard from "@/views/ProductCard";
-const getProductByCategory = (category: string) => {
-    return (
-        Products.filter((product) => product.category === category)
-    );
-};
-const Page = ({ params }: { params: { slug: string } }) => {
-    const result = getProductByCategory(params.slug);
-    return (
-        <div className="flex justify-center gap-x-3 flex-wrap flex-col lg:flex-row gap-y-5 mt-5 items-center">
-            {
-                result.length > 0 ? (
-                    result.map((product) => (
+import { getByCategory } from "../../../../sanity/lib/query";
+
+const Page = async ({ params }: { params: { slug: string } }) => {
+    try {
+        const result = await getByCategory(params.slug);
+
+        if (!result) {
+            // Handle the case where no products are found for the category
+            return <p className="text-center mt-8">No Products Found</p>;
+        }
+
+        if (result.length > 0) {
+            return (
+                <div className="flex justify-center gap-x-3 flex-wrap flex-col lg:flex-row gap-y-5 mt-5 items-center">
+                    {result.map((product) => (
                         <ProductCard
-                            key={product.id}
-                            title={product.name}
+                            key={product.slug}
+                            name={product.name}
+                            slug={product.slug}
+                            category={product.category}
                             price={product.price}
                             image={product.image}
-                            category={product.category}
-                            id={product.id}
                         />
-                    ))
-                ) : (<p>No Products Found</p>)
-            }
-        </div>
-    );
+                    ))}
+                </div>
+            );
+        } else {
+            return <p className="text-center mt-8">No Products Found</p>;
+        }
+    } catch (error) {
+        console.error("Error fetching products:", error);
+        return <p>Error fetching products</p>;
+    }
 };
+
 export default Page;

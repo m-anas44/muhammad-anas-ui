@@ -18,8 +18,8 @@ const Header = () => {
       </Link>
       <div className='block lg:hidden'>
         <button type="button" onClick={() => { setIsOpen(!isOpen) }} className='border p-1 rounded-lg border-gray-300'>
-          <MenuIcon className={`fill-current ${isOpen ? "hidden" : "block"}`} />          
-          <XIcon className={`fill-current ${isOpen ? "block" : "hidden"}`} />          
+          <MenuIcon className={`fill-current ${isOpen ? "hidden" : "block"}`} />
+          <XIcon className={`fill-current ${isOpen ? "block" : "hidden"}`} />
         </button>
       </div>
       {/* LINKS to show and hide font-bold text-red-500  */}
@@ -49,16 +49,16 @@ const Header = () => {
 
         <div className={`lg:flex gap-x-3 ${isOpen ? "flex p-[12px] justify-between w-full" : "hidden"}`}>
           <div className="flex flex-row items-center w-full">
-            <Input className="w-full border-gray-400 border-[1px] shadow-none rounded-l-full text-gray-400 lg:border p-[6px]" 
-            placeholder=" Search" 
-            onChange={(e)=>setInputVal(e.target.value)}/>
+            <Input className="w-full border-gray-400 border-[1px] shadow-none rounded-l-full text-gray-400 lg:border p-[6px]"
+              placeholder=" Search"
+              onChange={(e) => setInputVal(e.target.value)} />
             <Link href={`/categories/${inputVal}`}>
-            <button
-              type="button"
-              name="Search"
-              className="border-gray-400 border-2 p-[6px] border-l-0 rounded-r-full">
-              <Search className="text-gray-400" />
-            </button>
+              <button
+                type="button"
+                name="Search"
+                className="border-gray-400 border-2 p-[7px] border-l-0 rounded-r-full">
+                <Search className="text-gray-400" />
+              </button>
             </Link>
           </div>
           <div className="w-16 h-10 flex rounded-full bg-white justify-center items-center">

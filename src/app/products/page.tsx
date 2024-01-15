@@ -1,18 +1,20 @@
 import ProductCard from "@/views/ProductCard";
-import { Products } from "@/utils/mock";
-const AllProducts = () => {
+import { getProducts } from "../../../sanity/lib/query";
+
+const AllProducts = async() => {
+    const allProducts = await getProducts()
     return (
         <div className="flex flex-wrap flex-col lg:flex-row gap-x-3 justify-center gap-y-5 mt-5 items-center">
 
             {
-                Products.map(product => (
+                allProducts.map((product, index) => (
                     <ProductCard
-                        key={product.id}
-                        title={product.name}
+                        key={index}
+                        slug={product.slug}
+                        name={product.name}
+                        category={product.category}
                         price={product.price}
                         image={product.image}
-                        category={product.category}
-                        id={product.id}
                     />
                 ))
             }
